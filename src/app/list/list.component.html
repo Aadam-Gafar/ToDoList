@@ -19,15 +19,17 @@
 <!-- We use Angular's ngFor to iterate in a for-loop -->
 <div id="taskList" *ngFor="let task of currentTasks; let i = index">
     <h3>
-        <button (click)="delTask(i)">Remove</button>
-        {{task.name}}
+        <img (click)="delTask(i)" src="../../assets/x-icon.png" height="16px"> {{task.name}}
     </h3>
     <p>{{task.notes}}</p>
     <hr>
 </div>
 
 <footer>
-    <p><a
-            href="https://www.freepik.com/free-vector/businessman-holding-pencil-big-complete-checklist-with-tick-marks_11879344.htm#query=list&position=1&from_view=search&track=sph">Image
-            by jcomp</a> on Freepik</p>
+    <p>
+        image credits: <a
+            href="https://www.freepik.com/free-vector/businessman-holding-pencil-big-complete-checklist-with-tick-marks_11879344.htm#query=list&position=1&from_view=search&track=sph">
+            jcomp on Freepik</a>
+            <a href="https://www.flaticon.com/free-icons/delete" title="delete icons"> / Pixel perfect - Flaticon</a>
+    </p>
 </footer>
