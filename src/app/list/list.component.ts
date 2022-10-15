@@ -13,7 +13,9 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  currentTasks: Task[] = []; // An array of Task objects
+  currentTasks: Task[] = [
+    new Task("Buy groceries", "We need milk and eggs.")
+  ]; // An array of Task objects
 
   addTask(nameIn: string, notesIn: string) { // Appends a new Task object to the array
     this.currentTasks.push(new Task(nameIn, notesIn));

@@ -1,1 +1,5 @@
-<p>list works!</p>
+<div class="currentTasks" *ngFor="let task of currentTasks">
+    <h3>{{task.name}}</h3>
+    <p>{{task.notes}}</p>
+    <hr>
+</div>
