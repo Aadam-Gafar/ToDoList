@@ -1,6 +1,8 @@
-<label for="name">Enter a task: </label>
-<input type="submit" id="name" name="name" required>
+<input [(ngModel)]="newTaskName">
+<input [(ngModel)]="newTaskNotes">
+<button (click)="addTask()">Submit</button>
 
+<!-- We use Angular's ngFor to iterate in a for-loop -->
 <div class="currentTasks" *ngFor="let task of currentTasks; let i = index">
     <h3>
         <button (click)="delTask(i)">Remove</button>

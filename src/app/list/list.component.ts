@@ -7,6 +7,8 @@ import { Task } from 'src/task.model';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  newTaskName: string = ""; // Temporary store of new task name
+  newTaskNotes: string = ""; // Temporary store of new task notes
 
   constructor() { }
 
@@ -19,8 +21,8 @@ export class ListComponent implements OnInit {
     new Task("Visit the library", "Bring your card.")
   ]; // An array of Task objects
 
-  addTask(nameIn: string, notesIn: string) { // Appends a new Task object to the array
-    this.currentTasks.push(new Task(nameIn, notesIn));
+  addTask() { // Using two-way binding, appends an entered task to the array
+    this.currentTasks.push(new Task(this.newTaskName, this.newTaskNotes));
   }
 
   delTask(taskIndex: number) { // Removes ONE specified task from array
