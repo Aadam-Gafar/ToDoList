@@ -41,3 +41,7 @@ footer {
     bottom: 0px;
     width: 100%;
 }
+
+#content {
+    margin-bottom: 100px;
+}

@@ -25,6 +25,7 @@ export class ListComponent implements OnInit {
 
   addTask() { // Using two-way binding, appends an entered task to the array
     if(this.newTaskName!="") {
+      console.log("Pushing");
       this.currentTasks.push(new Task(this.newTaskName, this.newTaskNotes));
       this.saveTask();
       this.emptyListCheck();
