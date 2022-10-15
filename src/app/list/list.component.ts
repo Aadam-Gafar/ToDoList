@@ -28,6 +28,8 @@ export class ListComponent implements OnInit {
       this.currentTasks.push(new Task(this.newTaskName, this.newTaskNotes));
       this.saveTask();
       this.emptyListCheck();
+      this.newTaskName=""; // Resets input fields
+      this.newTaskNotes=""; // Resetes input fields
     } else {
       alert("You must enter a task name.");
     }
