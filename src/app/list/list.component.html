@@ -1,7 +1,18 @@
+<h1>To-Do List</h1>
+<div>
+    <img src="../../assets/work.jpg" height="250" alt="d">
+</div>
+
 <!-- ngModel uses two-way binding to retrieve / update data in list.component.ts -->
-<input [(ngModel)]="newTaskName">
-<input [(ngModel)]="newTaskNotes">
+<input [(ngModel)]="newTaskName" placeholder="Enter task...">
+<input [(ngModel)]="newTaskNotes" placeholder="Enter notes...">
 <button (click)="addTask()">Submit</button>
+
+<!-- Activated by the onEmptyList method in list.component.ts -->
+<div id="emptyListMessage" hidden>
+    <p>You're all done!</p>
+    <img src="../../assets/cheer.jpg" height="250" alt="d">
+</div>
 
 <!-- We use Angular's ngFor to iterate in a for-loop -->
 <div *ngFor="let task of currentTasks; let i = index">
@@ -12,3 +23,7 @@
     <p>{{task.notes}}</p>
     <hr>
 </div>
+
+<footer>
+    <p><a href="https://www.freepik.com/free-vector/businessman-holding-pencil-big-complete-checklist-with-tick-marks_11879344.htm#query=list&position=1&from_view=search&track=sph">Image by jcomp</a> on Freepik</p>
+</footer>
