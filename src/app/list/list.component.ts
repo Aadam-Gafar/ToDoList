@@ -24,9 +24,13 @@ export class ListComponent implements OnInit {
   }
 
   addTask() { // Using two-way binding, appends an entered task to the array
-    this.currentTasks.push(new Task(this.newTaskName, this.newTaskNotes));
-    this.saveTask();
-    this.emptyListCheck();
+    if(this.newTaskName!="") {
+      this.currentTasks.push(new Task(this.newTaskName, this.newTaskNotes));
+      this.saveTask();
+      this.emptyListCheck();
+    } else {
+      alert("You must enter a task name.");
+    }
   }
 
   delTask(taskIndex: number) { // Removes ONE specified task from array
