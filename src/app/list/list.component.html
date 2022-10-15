@@ -2,8 +2,8 @@
 
 <!-- ngModel uses two-way binding to retrieve / update data in list.component.ts -->
 <div id="inputFields">
-    <input id="nameInputField" [(ngModel)]="newTaskName" placeholder="Enter task..." onfocus="this.value=''">
-    <input [(ngModel)]="newTaskNotes" placeholder="Enter notes..." onfocus="this.value=''">
+    <input id="nameInputField" [(ngModel)]="newTaskName" placeholder="Enter task...">
+    <input [(ngModel)]="newTaskNotes" placeholder="Enter notes...">
     <button (click)="addTask()">Submit</button>
 </div>
 
