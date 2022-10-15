@@ -21,7 +21,7 @@
     <h3>
         <img (click)="delTask(i)" src="../../assets/x-icon.png" height="16px"> {{task.name}}
     </h3>
-    <p>{{task.notes}}</p>
+    <p *ngIf="task.notes != ''">{{task.notes}}</p>
     <hr>
 </div>
 
