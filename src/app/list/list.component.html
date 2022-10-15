@@ -1,5 +1,11 @@
-<div class="currentTasks" *ngFor="let task of currentTasks">
-    <h3>{{task.name}}</h3>
+<label for="name">Enter a task: </label>
+<input type="submit" id="name" name="name" required>
+
+<div class="currentTasks" *ngFor="let task of currentTasks; let i = index">
+    <h3>
+        <button (click)="delTask(i)">Remove</button>
+        {{task.name}}
+    </h3>
     <p>{{task.notes}}</p>
     <hr>
 </div>

@@ -14,15 +14,17 @@ export class ListComponent implements OnInit {
   }
 
   currentTasks: Task[] = [
-    new Task("Buy groceries", "We need milk and eggs.")
+    new Task("Buy groceries", "We need milk and eggs."),
+    new Task("Get a haircut", ""),
+    new Task("Visit the library", "Bring your card.")
   ]; // An array of Task objects
 
   addTask(nameIn: string, notesIn: string) { // Appends a new Task object to the array
     this.currentTasks.push(new Task(nameIn, notesIn));
   }
 
-  delTask() { // Removes the last element of the array
-    this.currentTasks.pop()
+  delTask(taskIndex: number) { // Removes ONE specified task from array
+    this.currentTasks.splice(taskIndex, 1);
   }
 
 }
