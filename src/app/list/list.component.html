@@ -4,8 +4,8 @@
 </div>
 
 <!-- ngModel uses two-way binding to retrieve / update data in list.component.ts -->
-<input [(ngModel)]="newTaskName" placeholder="Enter task...">
-<input [(ngModel)]="newTaskNotes" placeholder="Enter notes...">
+<input id="nameInputField" [(ngModel)]="newTaskName" value="" placeholder="Enter task..." onfocus="this.value=''">
+<input [(ngModel)]="newTaskNotes" placeholder="Enter notes..." onfocus="this.value=''">
 <button (click)="addTask()">Submit</button>
 
 <!-- Activated by the onEmptyList method in list.component.ts -->
