@@ -15,6 +15,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Currently filled with dummy tasks
   currentTasks: Task[] = [
     new Task("Buy groceries", "We need milk and eggs."),
     new Task("Get a haircut", ""),
