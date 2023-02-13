@@ -9,7 +9,7 @@
     </div>
 
     <div>
-        <img src="../../assets/work.jpg" height="250" alt="d">
+        <img src="assets/work.jpg" height="250" alt="d">
     </div>
 
     <!-- Activated by the onEmptyList method in list.component.ts -->
@@ -20,7 +20,7 @@
     <!-- We use Angular's ngFor to iterate in a for-loop -->
     <div id="taskList" *ngFor="let task of currentTasks; let i = index">
         <h3>
-            <img (click)="delTask(i)" src="../../assets/x-icon.png" height="16px"> {{task.name}}
+            <img (click)="delTask(i)" src="assets/x-icon.png" height="16px"> {{task.name}}
         </h3>
         <p *ngIf="task.notes != ''">{{task.notes}}</p>
         <hr>
