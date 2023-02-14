@@ -1,19 +1,12 @@
 # ToDoList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+A simple to-do list project to familiarise myself with the basics of Angular and JavaScript. A live version of this app can be found at: https://aadam-gafar.github.io/ToDoList/. It is sourced from a separate branch.
 
-## Live version
+To build your own version, clone the repository and ensure the following settings are enabled in your branch:
+- In angular.json, set "outputPath" to "docs"
+- In package.json, set "private" to "false"
+- In index.json, set <base href="/ToDoList">
 
-A live version of this application can be found on AWS S3: http://aadam-to-do-list.s3-website-us-east-1.amazonaws.com/.
+Then run `ng build` in the terminal.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Demo image](/demo.png)
