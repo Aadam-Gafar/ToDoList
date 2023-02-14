@@ -5,7 +5,7 @@ A simple to-do list project to familiarise myself with the basics of Angular and
 To build your own version, clone the repository and ensure the following settings are enabled in your branch:
 - In angular.json, set "outputPath" to "docs"
 - In package.json, set "private" to "false"
-- In index.json, set <base href="/ToDoList">
+- In index.json, set "base href" to "/ToDoList"
 
 Then run `ng build` in the terminal.
 
